@@ -1,4 +1,4 @@
-# num-format
+# url-builder
 A library for creating URL string with path, URI fragment, and query parameters for NodeJS and browser.
 
 ## installation
