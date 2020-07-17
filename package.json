@@ -1,0 +1,22 @@
+{
+  "name": "@dwdarm/url-builder",
+  "version": "0.0.1",
+  "description": "A library for creating URL string with path, URI fragment, and query parameters for NodeJS and browser.",
+  "main": "src/url-builder.js",
+  "repository": "dwdarm/url-builder",
+  "scripts": {
+    "test": "mocha",
+    "build": "npm run transpile && npm run uglify",
+    "transpile": "babel src -d lib",
+    "uglify": "uglifyjs lib/url-builder.js --output lib/url-builder.min.js"
+  },
+  "author": "Fajar Dwi Darmanto",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "mocha": "^8.0.1",
+    "uglify-js": "^3.10.0"
+  }
+}
