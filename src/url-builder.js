@@ -16,12 +16,14 @@
     if (typeof options.query === 'object' && options.query !== null) {
       const query = options.query; 
       Object.keys(query).forEach((key, i) => {
-        result = `${result}${i === 0 ? '?' : '&'}`
-        if (Array.isArray(query[key])) {
-          result = `${result}${key}=${query[key].join(',')}`;
-        } 
-        else {
-          result = `${result}${key}=${query[key]}`;
+        if (query[key] !== undefined && query[key] !== null) {
+          result = `${result}${i === 0 ? '?' : '&'}`
+          if (Array.isArray(query[key])) {
+            result = `${result}${key}=${query[key].join(',')}`;
+          } 
+          else {
+            result = `${result}${key}=${query[key]}`;
+          }
         }
       });
     }
